@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>バミューダトライアングルの科学的説明 | Truth Seeker</title>
-    <meta name="description" content="魔の海域「バミューダトライアングル」で起きる失踪事件。メタンハイドレート、磁気異常、気象現象など、科学적仮説に基づきその真相を解剖します。">
+    <meta name="description" content="魔の海域「バミューダトライアングル」で起きる失踪事件。メタンハイドレート、磁気異常、気象現象など、科学的仮説に基づきその真相を解剖します。">
+
+    <!-- OGP / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="魔の海域：バミューダトライアングルの真相 | Truth Seeker">
+    <meta property="og:description" content="バミューダトライアングルの謎を科学的仮説に基づき解読。">
+    <meta property="og:url" content="https://taksan-cyber.github.io/posts/bermuda.html">
+    <meta property="og:image" content="https://taksan-cyber.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -79,6 +87,7 @@
             letter-spacing: 1px;
             background: linear-gradient(135deg, #fff 0%, var(--bg-accent) 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -152,12 +161,144 @@
             letter-spacing: -0.02em;
         }
 
+        /* Credibility Meter */
+        .meter-container {
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid var(--border-glass);
+        }
+
+        .meter-label {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meter-track {
+            height: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .meter-fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 80%;
+            background: linear-gradient(90deg, #3b82f6, var(--bg-accent));
+            box-shadow: 0 0 15px var(--bg-accent);
+            border-radius: 4px;
+        }
+
         .post-intro {
             font-size: 1.1rem;
             color: var(--text-secondary);
             max-width: 700px;
             margin: 0 auto 3rem;
             line-height: 1.9;
+        }
+
+        /* Share & Related placeholder */
+        .share-container {
+            margin: 4rem 0;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .share-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-glass);
+            color: #fff;
+        }
+
+        .x-share {
+            background: #000;
+        }
+
+        .fb-share {
+            background: #1877f2;
+        }
+
+        .line-share {
+            background: #06c755;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(56, 189, 248, 0.3);
+            filter: brightness(1.2);
+        }
+
+        .related-section {
+            background: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .related-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .related-card:hover {
+            border-color: var(--bg-accent);
+            transform: scale(1.02);
+            background: rgba(56, 189, 248, 0.05);
+        }
+
+        .related-card h4 {
+            color: #fff;
+            margin: 10px 0 5px;
+            font-size: 1.1rem;
+        }
+
+        .related-card p {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .card-tag {
+            font-family: 'Outfit';
+            font-size: 0.65rem;
+            color: var(--bg-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
         }
 
         main {
@@ -328,7 +469,18 @@
 
     <div class="hero">
         <span class="category-tag">File No. 007 • Oceanography & Physics</span>
-        <h1>バミューダトライアングルの科学的説明：<br><span style="color: var(--text-secondary);">魔の海域に潜む「透明な脅威」</span></h1>
+        <h1>魔の海域：<br><span style="color: var(--text-secondary);">バミューダトライアングルの科学的実証</span></h1>
+
+        <!-- Credibility Meter -->
+        <div class="meter-container">
+            <div class="meter-label">
+                <span>Logical Certainty</span>
+                <span>80%</span>
+            </div>
+            <div class="meter-track">
+                <div class="meter-fill" style="width: 80%;"></div>
+            </div>
+        </div>
         <p class="post-intro">
             フロリダ、プエルトリコ、バミューダ諸島を結ぶ三角形の海域。古くから航空機や船舶が忽然と姿を消すとされるこの「魔の三角地帯」の謎を、最新の地球科学と統計学の視点から紐解きます。
         </p>
@@ -389,8 +541,42 @@
                     異次元の入り口は存在しません。しかし、自然界が時に人間の想像を超える牙を剥くという事実は、依然として畏怖を抱かせるに十分なミステリーです。
                 </p>
                 <p style="margin-top: 2rem; font-style: italic; color: var(--bg-accent);">
-                    海は秘密を隠すのではなく、ただ人間の理屈が追いつかないほどの深淵を抱えているだけなのです。
+                    未知の恐怖も、論理という光を当てれば、理解可能な自然現象へと姿を変えます。
                 </p>
+            </section>
+
+            <!-- Share Buttons -->
+            <div class="share-container scroll-reveal">
+                <p
+                    style="text-align: center; font-family: 'Outfit'; font-weight: 700; color: var(--text-dim); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">
+                    Share this Report</p>
+                <div class="share-buttons">
+                    <a href="#" class="share-btn x-share">X</a>
+                    <a href="#" class="share-btn fb-share">Facebook</a>
+                    <a href="#" class="share-btn line-share">LINE</a>
+                </div>
+            </div>
+
+            <!-- Related Files -->
+            <section class="scroll-reveal related-section">
+                <h2 style="font-size: 1.4rem;">関連解析ファイル</h2>
+                <div class="related-grid">
+                    <a href="unsolved-cases.html" class="related-card">
+                        <div class="card-tag">Case File</div>
+                        <h4>未解決事件の深淵</h4>
+                        <p>解明不能な3つの怪事件</p>
+                    </a>
+                    <a href="ancient-tech.html" class="related-card">
+                        <div class="card-tag">Technology</div>
+                        <h4>オーパーツの正体</h4>
+                        <p>古代技術の再評価</p>
+                    </a>
+                    <a href="pyramid.html" class="related-card">
+                        <div class="card-tag">Ancient</div>
+                        <h4>ピラミッドの真実</h4>
+                        <p>驚愕の土木技術</p>
+                    </a>
+                </div>
             </section>
         </article>
     </main>

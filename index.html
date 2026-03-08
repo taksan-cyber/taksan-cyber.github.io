@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>都市伝説の論理的検証 | Truth Seeker - 実証的アプローチで解き明かす真相</title>
     <meta name="description" content="ネットや街角で囁かれる都市伝説を、心理学、物理学、歴史学的観点から論理的に検証する特化型ブログ。単なる否定ではなく、その背景にある真実を実証的に探ります。">
+
+    <!-- OGP / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Truth Seeker | 都市伝説の論理的検証">
+    <meta property="og:description" content="科学と論理の光で闇に隠れた真相を解明。実証的アプローチによるオカルト検証ブログ。">
+    <meta property="og:url" content="https://taksan-cyber.github.io/">
+    <meta property="og:image" content="https://taksan-cyber.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://taksan-cyber.github.io/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,22 +97,47 @@
         }
 
         .hero {
-            padding: calc(var(--header-h) + 4rem) 0 4rem;
+            padding: calc(var(--header-h) + 6rem) 0 6rem;
             text-align: center;
-            background: radial-gradient(circle at top right, #1e1b4b, transparent);
+            background:
+                radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.15), transparent 40%),
+                radial-gradient(circle at 20% 80%, rgba(30, 27, 75, 0.4), transparent 40%),
+                var(--bg-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.2;
+            pointer-events: none;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             color: var(--text-muted);
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
+            font-weight: 300;
+            letter-spacing: 0.02em;
         }
 
         main {

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マンデラエフェクトの謎：記憶の不一致は「平行世界」の証拠か？ | Truth Seeker</title>
+    <meta name="description" content="実在しない記憶を大勢が共有する現象「マンデラエフェクト」。単なる記憶違いか、それともパラレルワールドへの干渉か？心理学と量子力学の視点から解析します。">
+
+    <!-- OGP / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="マンデラエフェクトの謎：記憶の不一致は「平行世界」の証拠か？ | Truth Seeker">
+    <meta property="og:description" content="実在しない記憶を大勢が共有する現象「マンデラエフェクト」。心理学と量子力学の視点から解析。">
+    <meta property="og:url" content="https://taksan-cyber.github.io/posts/mandela-effect.html">
+    <meta property="og:image" content="https://taksan-cyber.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5096588905574559"
+        crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --bg-base: #020617;
+            --bg-surface: rgba(15, 23, 42, 0.7);
+            --bg-accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.2);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-dim: #64748b;
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --header-blur: 15px;
+            --container-w: 840px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.8;
+            background-image: radial-gradient(circle at 50% -20%, #1e293b 0%, transparent 60%);
+        }
+
+        header {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1000px;
+            height: 60px;
+            background: rgba(2, 6, 23, 0.6);
+            backdrop-filter: blur(var(--header-blur));
+            border: 1px solid var(--border-glass);
+            border-radius: 40px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: 'Outfit';
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            background: linear-gradient(135deg, #fff 0%, var(--bg-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            z-index: 1001;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--bg-accent);
+            width: 0%;
+            box-shadow: 0 0 10px var(--bg-accent);
+        }
+
+        .hero {
+            padding-top: 180px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+
+        .category-tag {
+            font-family: 'Outfit';
+            font-size: 0.75rem;
+            color: var(--bg-accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: var(--accent-glow);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        h1 {
+            font-family: 'Outfit', 'Noto Sans JP';
+            font-size: clamp(2rem, 5vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin: 2rem 0;
+        }
+
+        .meter-container {
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid var(--border-glass);
+        }
+
+        .meter-label {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Outfit';
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+        }
+
+        .meter-track {
+            height: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .meter-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, var(--bg-accent));
+            width: 45%;
+            box-shadow: 0 0 15px var(--bg-accent);
+        }
+
+        main {
+            max-width: var(--container-w);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        article section {
+            background: var(--bg-surface);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: 'Outfit';
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "";
+            width: 4px;
+            height: 24px;
+            background: var(--bg-accent);
+            margin-right: 1rem;
+            border-radius: 4px;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 4rem 0;
+        }
+
+        .share-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-family: 'Outfit';
+            font-weight: 700;
+            color: #fff;
+            border: 1px solid var(--border-glass);
+        }
+
+        .x-share {
+            background: #000;
+        }
+
+        .fb-share {
+            background: #1877f2;
+        }
+
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--border-glass);
+            text-align: center;
+            color: var(--text-dim);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <header>
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">TRUTH SEEKER</a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <span class="category-tag">File No. 014 • Cognitive Science</span>
+        <h1>マンデラエフェクトの謎<br><span style="color: var(--text-secondary);">記憶の不一致は「平行世界」の証拠か？</span></h1>
+        <div class="meter-container">
+            <div class="meter-label"><span>Logical Certainty</span><span>45%</span></div>
+            <div class="meter-track">
+                <div class="meter-fill" style="width: 45%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <article>
+            <section>
+                <h2>1. 事象の概要</h2>
+                <p>「ピカチュウの尻尾の先は黒かったはずだ」「Fruit of the
+                    Loomのロゴには角の器（コーヌコピア）があった」——。このように、実際とは異なる記憶を不特定多数が共有する現象を「マンデラエフェクト」と呼びます。</p>
+            </section>
+            <section>
+                <h2>2. パラレルワールド説</h2>
+                <p>一部の陰謀論者は、CERNの粒子加速器実験などが原因で世界線が分岐し、私たちが別の宇宙からこちらの宇宙へ「移動」してしまったのだと主張します。これが、多くの人が同じ誤った記憶を持つ理由だとされています。
+                </p>
+            </section>
+            <section>
+                <h2>3. 心理学的検証：虚偽記憶の形成</h2>
+                <p>科学的には、これは「スキーマ（知識構造）」による記憶の再構成と説明されます。例えば、ピカチュウの耳の先が黒いことから、脳が勝手に「尻尾の先も黒いはずだ」と予測し、不完全な記憶を補完してしまうのです。
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer>&copy; 2026 TRUTH SEEKER</footer>
+
+    <script>
+        window.onscroll = function () {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+    </script>
+</body>
+
+</html>

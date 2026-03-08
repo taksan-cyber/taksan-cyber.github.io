@@ -7,6 +7,14 @@
     <title>未解決事件の背後に流れる「不可解な共通点」 | Truth Seeker</title>
     <meta name="description"
         content="エリザ・ラム、ディアトロフ峠事件、ヴォイニッチ手稿。科学が敗北を認めた「未解決の怪奇」には、本当にオカルト的な力が働いているのでしょうか。未だ解明されない謎を論理の極限まで追い詰めます。">
+
+    <!-- OGP / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="未解決事件の深淵：科学が敗北した3つの闇 | Truth Seeker">
+    <meta property="og:description" content="エリザ・ラム、ディアトロフ峠事件、ヴォイニッチ手稿。未解決の怪奇を論理的に解読。">
+    <meta property="og:url" content="https://taksan-cyber.github.io/posts/unsolved-cases.html">
+    <meta property="og:image" content="https://taksan-cyber.github.io/assets/dyatlov_pass_mystery_v2_1772681620994.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -80,6 +88,7 @@
             letter-spacing: 1px;
             background: linear-gradient(135deg, #fff 0%, var(--bg-accent) 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -153,12 +162,144 @@
             letter-spacing: -0.02em;
         }
 
+        /* Credibility Meter */
+        .meter-container {
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid var(--border-glass);
+        }
+
+        .meter-label {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meter-track {
+            height: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .meter-fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 20%;
+            background: linear-gradient(90deg, #ef4444, #3b82f6);
+            box-shadow: 0 0 15px var(--bg-accent);
+            border-radius: 4px;
+        }
+
         .post-intro {
             font-size: 1.1rem;
             color: var(--text-secondary);
             max-width: 700px;
             margin: 0 auto 3rem;
             line-height: 1.9;
+        }
+
+        /* Share & Related placeholder */
+        .share-container {
+            margin: 4rem 0;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .share-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-glass);
+            color: #fff;
+        }
+
+        .x-share {
+            background: #000;
+        }
+
+        .fb-share {
+            background: #1877f2;
+        }
+
+        .line-share {
+            background: #06c755;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(56, 189, 248, 0.3);
+            filter: brightness(1.2);
+        }
+
+        .related-section {
+            background: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .related-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .related-card:hover {
+            border-color: var(--bg-accent);
+            transform: scale(1.02);
+            background: rgba(56, 189, 248, 0.05);
+        }
+
+        .related-card h4 {
+            color: #fff;
+            margin: 10px 0 5px;
+            font-size: 1.1rem;
+        }
+
+        .related-card p {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .card-tag {
+            font-family: 'Outfit';
+            font-size: 0.65rem;
+            color: var(--bg-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
         }
 
         main {
@@ -306,6 +447,213 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Meter UI */
+        .meter-container {
+            max-width: 300px;
+            margin: 2rem auto 3rem;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .meter-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .meter-label span:first-child {
+            color: var(--bg-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meter-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            height: 8px;
+            overflow: hidden;
+        }
+
+        .meter-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+            border-radius: 5px;
+            transition: width 1s ease-out;
+            box-shadow: 0 0 8px var(--bg-accent);
+        }
+
+        /* Share Buttons */
+        .share-container {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            color: var(--text-primary);
+            border: 1px solid var(--border-glass);
+            background: rgba(15, 23, 42, 0.5);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .x-share {
+            background-color: #000;
+            border-color: #000;
+        }
+
+        .x-share:hover {
+            background-color: #333;
+        }
+
+        .fb-share {
+            background-color: #1877f2;
+            border-color: #1877f2;
+        }
+
+        .fb-share:hover {
+            background-color: #3688f4;
+        }
+
+        .line-share {
+            background-color: #00c300;
+            border-color: #00c300;
+        }
+
+        .line-share:hover {
+            background-color: #22d422;
+        }
+
+        /* Related Section */
+        .related-section {
+            background: var(--bg-surface);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: clamp(1.5rem, 5vw, 3.5rem);
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .related-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2.5rem;
+            color: var(--bg-accent);
+            text-align: center;
+        }
+
+        .related-section h2::before {
+            display: none;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .related-card {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .related-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 0;
+        }
+
+        .related-card:hover::before {
+            opacity: 1;
+        }
+
+        .related-card:hover {
+            border-color: var(--bg-accent);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-tag {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--bg-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+            display: inline-block;
+            background: var(--accent-glow);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            align-self: flex-start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .related-card h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+            position: relative;
+            z-index: 1;
+        }
+
+        .related-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 
@@ -329,7 +677,18 @@
 
     <div class="hero">
         <span class="category-tag">File No. 003 • Forensics & Psychological Profiling</span>
-        <h1>未解決事件の背後に流れる「不可解な共通点」<br><span style="color: var(--text-secondary);">論理の極限で立ち止まる「謎」の正体</span></h1>
+        <h1>未解決事件の深淵：<br><span style="color: var(--text-secondary);">科学が敗北を認めた「不可解な共通点」</span></h1>
+
+        <!-- Credibility Meter -->
+        <div class="meter-container">
+            <div class="meter-label">
+                <span>Logical Certainty</span>
+                <span>20%</span>
+            </div>
+            <div class="meter-track">
+                <div class="meter-fill" style="width: 20%;"></div>
+            </div>
+        </div>
         <p class="post-intro">
             防犯カメラに映った奇妙な行動、雪山でテントを内側から切り裂き逃げ出した人々、そして何世紀もの間、解読を拒み続ける謎の古文書。世界中には、どんなに捜査を尽くしても「常識的な結末」に辿り着けない空白地帯が点在しています。本稿では、人類の論理が敗北を認めた3つの特異点に光を当て、その深層心理を紐解きます。
         </p>
@@ -428,8 +787,42 @@
                     宇宙人や秘密兵器を想定するのは、世界が「理不尽」であることを認めたくない心の現れかもしれません。答えのない問いの前に留まることは苦痛ですが、その苦痛こそが、私たちが人間である証でもあるのです。
                 </p>
                 <p style="margin-top: 2rem; font-style: italic; color: var(--bg-accent);">
-                    本当のミステリーは事件そのものではなく、それを執拗に追い続ける私たちの探究心そのものです。
+                    真相は、私たちが「理解可能である」と信じている領域の外側に眠っているのかもしれません。
                 </p>
+            </section>
+
+            <!-- Share Buttons -->
+            <div class="share-container scroll-reveal">
+                <p
+                    style="text-align: center; font-family: 'Outfit'; font-weight: 700; color: var(--text-dim); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">
+                    Share this Report</p>
+                <div class="share-buttons">
+                    <a href="#" class="share-btn x-share">X</a>
+                    <a href="#" class="share-btn fb-share">Facebook</a>
+                    <a href="#" class="share-btn line-share">LINE</a>
+                </div>
+            </div>
+
+            <!-- Related Files -->
+            <section class="scroll-reveal related-section">
+                <h2 style="font-size: 1.4rem;">関連解析ファイル</h2>
+                <div class="related-grid">
+                    <a href="ai-conspiracy.html" class="related-card">
+                        <div class="card-tag">Modern</div>
+                        <h4>AIという新神話</h4>
+                        <p>制御不能なアルゴリズム</p>
+                    </a>
+                    <a href="psychology-conspiracy.html" class="related-card">
+                        <div class="card-tag">Psychology</div>
+                        <h4>陰謀論の心理学</h4>
+                        <p>なぜ人は信じるのか</p>
+                    </a>
+                    <a href="secret-societies.html" class="related-card">
+                        <div class="card-tag">Societies</div>
+                        <h4>秘密結社の系譜</h4>
+                        <p>地下に潜る権力構造</p>
+                    </a>
+                </div>
             </section>
         </article>
     </main>

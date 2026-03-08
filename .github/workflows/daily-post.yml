@@ -1,0 +1,31 @@
+name: Triple-Day Auto-Post
+
+on:
+  schedule:
+    - cron: '0 0 */3 * *' # Every 3 days at 00:00 UTC
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Publish new post
+        run: python scripts/publish_post.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Truth Seeker Bot"
+          git config --global user.email "bot@truthseeker.blog"
+          git add .
+          git commit -m "Auto-publish scheduled content [skip ci]" || echo "No changes to commit"
+          git push

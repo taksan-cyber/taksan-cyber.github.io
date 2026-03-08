@@ -7,6 +7,14 @@
     <title>月面着陸は本当に捏造だったのか？アポロ計画の陰謀論を検証 | Truth Seeker</title>
     <meta name="description"
         content="1969年、人類初の月面着陸。しかし今なお「スタジオで撮影された」という疑惑が消えません。旗の揺れ、星のない空、影の向きなど、代表的な疑惑を科学的根拠に基づき論理的に解体します。">
+
+    <!-- OGP / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="月面着陸の真実：科学で解体する捏造説 | Truth Seeker">
+    <meta property="og:description" content="アポロ計画の陰謀論を科学的根拠に基づき論理的に解読。">
+    <meta property="og:url" content="https://taksan-cyber.github.io/posts/moon-landing.html">
+    <meta property="og:image" content="https://taksan-cyber.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -81,6 +89,7 @@
             letter-spacing: 1px;
             background: linear-gradient(135deg, #fff 0%, var(--bg-accent) 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -154,12 +163,144 @@
             letter-spacing: -0.02em;
         }
 
+        /* Credibility Meter */
+        .meter-container {
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid var(--border-glass);
+        }
+
+        .meter-label {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meter-track {
+            height: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .meter-fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 95%;
+            background: linear-gradient(90deg, #3b82f6, var(--bg-accent));
+            box-shadow: 0 0 15px var(--bg-accent);
+            border-radius: 4px;
+        }
+
         .post-intro {
             font-size: 1.1rem;
             color: var(--text-secondary);
             max-width: 700px;
             margin: 0 auto 3rem;
             line-height: 1.9;
+        }
+
+        /* Share & Related placeholder */
+        .share-container {
+            margin: 4rem 0;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .share-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-glass);
+            color: #fff;
+        }
+
+        .x-share {
+            background: #000;
+        }
+
+        .fb-share {
+            background: #1877f2;
+        }
+
+        .line-share {
+            background: #06c755;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(56, 189, 248, 0.3);
+            filter: brightness(1.2);
+        }
+
+        .related-section {
+            background: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .related-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .related-card:hover {
+            border-color: var(--bg-accent);
+            transform: scale(1.02);
+            background: rgba(56, 189, 248, 0.05);
+        }
+
+        .related-card h4 {
+            color: #fff;
+            margin: 10px 0 5px;
+            font-size: 1.1rem;
+        }
+
+        .related-card p {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .card-tag {
+            font-family: 'Outfit';
+            font-size: 0.65rem;
+            color: var(--bg-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
         }
 
         main {
@@ -330,7 +471,18 @@
 
     <div class="hero">
         <span class="category-tag">File No. 013 • Space Science & History</span>
-        <h1>月面着陸は本当に捏造だったのか？<br><span style="color: var(--text-secondary);">人類の偉業を揺さぶる「捏造説」の虚実</span></h1>
+        <h1>アポロ計画の残像：<br><span style="color: var(--text-secondary);">科学で解体する「捏造説」の論理</span></h1>
+
+        <!-- Credibility Meter -->
+        <div class="meter-container">
+            <div class="meter-label">
+                <span>Logical Certainty</span>
+                <span>95%</span>
+            </div>
+            <div class="meter-track">
+                <div class="meter-fill" style="width: 95%;"></div>
+            </div>
+        </div>
         <p class="post-intro">
             1969年7月20日。「これは一人の人間にとっては小さな一歩だが、人類にとっては偉大な飛躍である」。あまりに巨大な偉業ゆえに生まれた「スタジオ撮影疑惑」を検証します。
         </p>
@@ -395,8 +547,42 @@
                     着陸は間違いなく行われました。この伝説は、真実を示す厖大な証拠を無視してまで「物語」に縋る人間の性質を浮き彫りにしています。
                 </p>
                 <p style="margin-top: 2rem; font-style: italic; color: var(--bg-accent);">
-                    月には、私たちが置いてきた足跡だけでなく、私たちが乗り越えるべき不信の壁も残されています。
+                    真実は暗闇の中にではなく、常に私たちの目の前にあるデータの中に存在しています。
                 </p>
+            </section>
+
+            <!-- Share Buttons -->
+            <div class="share-container scroll-reveal">
+                <p
+                    style="text-align: center; font-family: 'Outfit'; font-weight: 700; color: var(--text-dim); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 2px;">
+                    Share this Report</p>
+                <div class="share-buttons">
+                    <a href="#" class="share-btn x-share">X</a>
+                    <a href="#" class="share-btn fb-share">Facebook</a>
+                    <a href="#" class="share-btn line-share">LINE</a>
+                </div>
+            </div>
+
+            <!-- Related Files -->
+            <section class="scroll-reveal related-section">
+                <h2 style="font-size: 1.4rem;">関連解析ファイル</h2>
+                <div class="related-grid">
+                    <a href="pyramid.html" class="related-card">
+                        <div class="card-tag">Ancient</div>
+                        <h4>ピラミッドの真実</h4>
+                        <p>驚愕の土木技術</p>
+                    </a>
+                    <a href="ancient-tech.html" class="related-card">
+                        <div class="card-tag">Technology</div>
+                        <h4>オーパーツの正体</h4>
+                        <p>古代技術の再評価</p>
+                    </a>
+                    <a href="bermuda.html" class="related-card">
+                        <div class="card-tag">Location</div>
+                        <h4>バミューダの正体</h4>
+                        <p>磁場と気流の解析</p>
+                    </a>
+                </div>
             </section>
         </article>
     </main>

@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>記事テンプレート | Truth Seeker - 論理と怪異の境界線</title>
     <meta name="description" content="都市伝説の真相を科学的に解剖する、次世代の調査レポート。概要、拡散理由、実証、謎、結論の5層構造。">
+
+    <!-- OGP / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="記事タイトル | Truth Seeker">
+    <meta property="og:description" content="都市伝説の真相を科学的に解剖する、次世代の調査レポート。">
+    <meta property="og:url" content="https://taksan-cyber.github.io/posts/template.html">
+    <meta property="og:image" content="https://taksan-cyber.github.io/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="記事タイトル | Truth Seeker">
+    <meta name="twitter:description" content="都市伝説の真相を科学的に解剖する、次世代の調査レポート。">
+    <meta name="twitter:image" content="https://taksan-cyber.github.io/assets/og-image.png">
+
     <!-- Google Fonts: Outfit for headers, Noto Sans JP for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -156,6 +168,48 @@
             margin-left: auto;
             margin-right: auto;
             letter-spacing: -0.02em;
+        }
+
+        /* Credibility Meter */
+        .meter-container {
+            max-width: 500px;
+            margin: 0 auto 3rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid var(--border-glass);
+        }
+
+        .meter-label {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meter-track {
+            height: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .meter-fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 75%;
+            /* Adjust per article */
+            background: linear-gradient(90deg, #3b82f6, var(--bg-accent));
+            box-shadow: 0 0 15px var(--bg-accent);
+            border-radius: 4px;
         }
 
         .post-intro {
@@ -343,6 +397,98 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Share Buttons */
+        .share-container {
+            margin: 4rem 0;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .share-btn {
+            padding: 0.8rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-glass);
+            color: #fff;
+        }
+
+        .x-share {
+            background: #000;
+        }
+
+        .fb-share {
+            background: #1877f2;
+        }
+
+        .line-share {
+            background: #06c755;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(56, 189, 248, 0.3);
+            filter: brightness(1.2);
+        }
+
+        /* Related Grid */
+        .related-section {
+            background: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .related-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .related-card:hover {
+            border-color: var(--bg-accent);
+            transform: scale(1.02);
+            background: rgba(56, 189, 248, 0.05);
+        }
+
+        .related-card h4 {
+            color: #fff;
+            margin: 10px 0 5px;
+            font-size: 1.1rem;
+        }
+
+        .related-card p {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .card-tag {
+            font-family: 'Outfit';
+            font-size: 0.65rem;
+            color: var(--bg-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+        }
     </style>
 </head>
 
@@ -367,6 +513,18 @@
     <div class="hero">
         <span class="category-tag">File No. 000 • Investigating</span>
         <h1>記事タイトルをここに入力：<br><span style="color: var(--text-secondary);">サブタイトルがあればここに。</span></h1>
+
+        <!-- Credibility Meter -->
+        <div class="meter-container">
+            <div class="meter-label">
+                <span>Logical Certainty</span>
+                <span>75%</span>
+            </div>
+            <div class="meter-track">
+                <div class="meter-fill" style="width: 75%;"></div>
+            </div>
+        </div>
+
         <p class="post-intro">
             記事の導入文をここに記載します。読者の興味を惹きつけ、なぜこの都市伝説を今、私たちが検証すべきなのかを、論理的かつミステリアスな文体で提示してください。
         </p>
